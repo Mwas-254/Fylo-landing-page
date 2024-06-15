@@ -10,6 +10,9 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    body{
+      scroll-behavior: auto;
+    }
     *{
        box-sizing: border-box;
        padding: 0;
@@ -24,63 +27,67 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      
     }
     nav ul{
       display: flex;
-      margin-right: 50px;
+     ;
+      margin-top: 30px;
     }
     li{
       margin: 15px;
       list-style-type: none;
     }
     .svg1{
-      margin-left: 65px;
+      margin-left: 30px;
+      margin-top: 30px;
     }
    p{
     margin: 0;
-    font-size: small;
-
+    font-size: 16px;
    }
-    .para{
-      margin-left: 20px;
-      margin-top: 50px;
-      width: 320px;
-      
-    }
+   .two{
+   display: grid;
+   grid-template-columns: repeat(2, 0.46fr);
+   align-items: center;
+   justify-content: center;
+   margin-top: 50px;
+   margin-bottom: 8em;
+   }
+
+   
+   .para h2{
+    max-width: 350px;
+    font-size: 25px;
+   }
+
+   .para input{
+    height: 50px;
+    width: 200px;
+   }
     button{
       border: 0;
       color: white;
       background-color: blue;
-      height: 30px;
-      width: 150px;
+      height: 50px;
     }
   
    .image1{
-      width: 400px;
-      margin-right: 40px;
+      width: 350px;
+      
     }
 
     .three{
+      display: grid;
+      grid-template-columns: repeat(2, 0.47fr);
+      justify-content: center;
       background-image: url(images/bg-curve-desktop.svg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: bottom;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding-left: 80px;
-      margin-top: 100px;
-      height: 470px;
     }
-    .para2{
-      margin-right: 50px;
-      width: 320px;
-
-    }
-
     
     .image2{
-      width: 350px;
+      width: 300px;
     }
     .image3{
       height: 50px;
@@ -94,46 +101,42 @@
       box-shadow: 3px -2px 10px -8px ;
       margin-bottom: 50px;
     }
-    .para3  p, img{
     
-    }
     figure{
       display: flex;
       align-items: center;
       margin: 0;
-      
     }
 
     .four{
-      background-color:hsl(238, 22%, 44%);
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, 0.5fr);
       align-items: center;
-      justify-content: space-around;
-      height: 200px;
-
+      justify-items: center;
+      background-color:hsl(238, 22%, 44%);
     }
     .para4{
-      margin-right: 200px;
+      margin-left: 20px;
     }
+    
     .four p, h1{
       color: white;
     }
     #input{
-      height: 25px;
+      height: 30px;
       width: 250px;
     }
     #button{
       background-color: skyblue;
       color: white;
-      margin-top: 10px;
       border: 0;
       border-radius: 3px;
-      height: 30px;
+      height: 25px;
     }
 
     .five{
-      height: 250px;
       background-color:  hsl(231, 81%, 17%);
+     
     }
     
     span{
@@ -154,14 +157,12 @@
     .figure{
       display: flex;
       justify-content: center;
-      position: relative;
-      bottom: 50px;
       color: white;
-
+      
     }
     
     .About{
-   margin-right: 30px;
+      margin-right: 30px;
     }
     .us{
       margin-left: 50px;
@@ -169,14 +170,75 @@
    
     .figure img{
       height: 30px;
+      margin-left: 20px;
     }
 
     @media (max-width: 475px) {
-      .one, .two, .figure, .five, .four{
+       .one{
+        display: grid;
+        grid-template-columns: repeat(2, 0.5fr);
+        justify-content: center;
+        margin-right: 120px;
+       }
+       nav li{
+        margin: 5px;
+        margin-top: 20px;
+       }
+       .svg1{
+        transform: scale(0.5);
+       }
+       
+      .two, .figure,.four{
         display: flex;
         flex-direction: column;
       }
+      .para{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        order: 2;
+      }
+      .para input, button{
+        width: 300px;
+        margin: 10px;
+      }
+      .three{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+      }
+      .image2{
+        margin-left: 80px;
+      }
+     .para2{
+         margin-left: 50px;
+         grid-row-start: 2;
+         grid-row-end: 3;
+     }
+     .para2 h2{
+      margin-bottom: 50px;
+      text-align: center;
+     }
+     .para3{
+      margin-left: 80px;
+     }
+     .four{
+      text-align: center;
+     }
+     #input, #button{
+      margin: 0;
+      width: 300px;
+     }
+     
+     
+     
+
+     
     }
+    
+    
    
     
   </style>
@@ -196,8 +258,8 @@
 
 <section class="two">
   <div class="para">
-    <h2>All you files in one secure</h2>
-    <h2>Location, accessible anywhere</h2>
+    <h2>All you files in one secure
+    Location, accessible anywhere</h2>
     <p>Fylo stores your most important files in one secure location,Access</p>
     <p>them wherever you need, share and collaborate with friends, family,</p>
     <p>and co-workers</p>
@@ -205,7 +267,7 @@
     <button type="submit">Get Started</button>
   </div>
   
-  <div><img class="image1" src="images/illustration-1.svg" alt=""></div>
+  <img class="image1" src="images/illustration-1.svg" alt="">
 </section>
 
 <section class="three">
@@ -219,8 +281,8 @@
    
   </div>
    
-  <div><img class="image2" src="images/illustration-2.svg" alt=""></div>
-  <figure>
+  <img class="image2" src="images/illustration-2.svg" alt="">
+  <figure class="caption">
    <div class="para3">
     <img src="images/icon-quotes.svg" alt="">
     <p>Fylo has improved our team productivity by</p>
@@ -285,8 +347,5 @@
 
 </section>
 </main> 
-
-
-
 </body>
 </html>
